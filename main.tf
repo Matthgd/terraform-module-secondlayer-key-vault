@@ -2,7 +2,7 @@
 data "azurerm_client_config" "current" {}
 
 module "azurerm_key_vault" {
-  source = "https://github.com/Matthgd/terraform-module-azurerm-key-vault.git"
+  source = "git::https://github.com/Matthgd/terraform-module-azurerm-key-vault.git"
   name                        = var.kv_name_exception != null ? var.kv_name_exception : "kv-${var.name}"
   location                    = var.location.name
   resource_group_name         = var.resource_group_name.name
