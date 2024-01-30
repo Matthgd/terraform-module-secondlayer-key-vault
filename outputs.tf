@@ -1,4 +1,4 @@
-output "kv_id" {
+output "id" {
   sensitive = true
-  value =   azurerm_key_vault.main.id
+  value =   module.azurerm_key_vault.id
 }
